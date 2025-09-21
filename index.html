@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinil Vidushanka Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="techno-bg">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    </div>
+
+    <canvas id="techno-bg"></canvas>
+  <nav>
+    <div class="nav-wrapper">
+      <h1 onclick="scrollToSection('home')">Vinil Vidushanka</h1>
+
+      <!-- Desktop Menu -->
+      <ul class="nav-items">
+        <li onclick="scrollToSection('home')">home</li>
+        <li onclick="scrollToSection('about')">about</li>
+        <li onclick="scrollToSection('services')">services</li>
+        <li onclick="scrollToSection('skills')">skills</li>
+        <li onclick="scrollToSection('projects')">projects</li>
+        <li onclick="scrollToSection('contact')">contact</li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <ul class="mobile-menu" id="mobileMenu">
+      <li onclick="scrollToSection('home')">home</li>
+      <li onclick="scrollToSection('about')">about</li>
+      <li onclick="scrollToSection('services')">services</li>
+      <li onclick="scrollToSection('skills')">skills</li>
+      <li onclick="scrollToSection('projects')">projects</li>
+      <li onclick="scrollToSection('contact')">contact</li>
+    </ul>
+  </nav>
+
+  <!-- Dummy Sections -->
+  <section id="home" class="home-section section-techno">
+  <div class="container">
+    <!-- Left: Profile Image -->
+    <div class="profile-image">
+      <div class="image-border">
+        <img src="assets/images/IMG_3174.JPG" alt="Profile" />
+      </div>
+    </div>
+
+    <!-- Right: Name, Typing Text, Social Links, Buttons -->
+    <div class="home-content">
+      <h1 class="home-title">
+        Hi, I'm <br><span class="gradient-text">Vinil Vidushanka</span>
+      </h1>
+
+      <!-- Looping Typing Effect -->
+      <p class="typing-text" id="typingText"></p>
+
+      <!-- Social Links -->
+      <!-- Font Awesome CDN -->
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
+        <div class="social-links">
+        <a href="https://github.com/vinilvidushanka" target="_blank" class="social-link" aria-label="GitHub">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0.297c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.76-1.605-2.665-.304-5.467-1.332-5.467-5.93 0-1.31.468-2.382 1.235-3.222-.123-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.288-1.552 3.294-1.23 3.294-1.23.653 1.653.241 2.874.118 3.176.77.84 1.233 1.912 1.233 3.222 0 4.61-2.807 5.625-5.479 5.921.429.37.813 1.096.813 2.21 0 1.596-.014 2.883-.014 3.273 0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+      </a>
+      <a href="https://linkedin.com/in/vinil-vidushanka-b64555319" target="_blank" class="social-link" aria-label="LinkedIn">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.788-1.75-1.757s.784-1.757 1.75-1.757 1.75.788 1.75 1.757-.784 1.757-1.75 1.757zm13.5 11.268h-3v-5.604c0-1.337-.026-3.063-1.867-3.063-1.868 0-2.154 1.46-2.154 2.969v5.698h-3v-10h2.881v1.367h.041c.401-.762 1.379-1.566 2.841-1.566 3.036 0 3.6 1.998 3.6 4.594v5.605z"/>
+        </svg>
+      </a>
+      <a href="https://www.facebook.com/vinil.vidushanka" target="_blank" class="social-link" aria-label="Facebook">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24h-1.918c-1.504 0-1.794.715-1.794 1.763v2.309h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.324-.593 1.324-1.324v-21.35c0-.732-.594-1.325-1.325-1.325z"/>
+        </svg>
+      </a>
+      <a href="https://instagram.com/yourusername" target="_blank" class="social-link" aria-label="Instagram">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.343 3.608 1.319.975.975 1.256 2.242 1.318 3.608.058 1.266.069 1.646.069 4.843s-.012 3.577-.07 4.843c-.062 1.366-.343 2.633-1.318 3.608-.975.975-2.242 1.256-3.608 1.318-1.266.058-1.646.069-4.843.069s-3.577-.012-4.843-.07c-1.366-.062-2.633-.343-3.608-1.318-.975-.975-1.256-2.242-1.318-3.608-.058-1.266-.069-1.646-.069-4.843s.012-3.577.07-4.843c.062-1.366.343-2.633 1.318-3.608.975-.975 2.242-1.256 3.608-1.318 1.266-.058 1.646-.069 4.843-.069zm0-2.163c-3.259 0-3.667.012-4.947.07-1.582.073-2.996.36-4.096 1.46-1.1 1.1-1.386 2.514-1.46 4.096-.058 1.28-.07 1.688-.07 4.947s.012 3.667.07 4.947c.073 1.582.36 2.996 1.46 4.096 1.1 1.1 2.514 1.386 4.096 1.46 1.28.058 1.688.07 4.947.07s3.667-.012 4.947-.07c1.582-.073 2.996-.36 4.096-1.46 1.1-1.1 1.386-2.514 1.46-4.096.058-1.28.07-1.688.07-4.947s-.012-3.667-.07-4.947c-.073-1.582-.36-2.996-1.46-4.096-1.1-1.1-2.514-1.386-4.096-1.46-1.28-.058-1.688-.07-4.947-.07zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.208 0-4-1.792-4-4s1.792-4 4-4 4 1.792 4 4-1.792 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441z"/>
+        </svg>
+      </a>
+        </div>
+
+
+      <!-- Buttons -->
+      <div class="home-buttons">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="Vinil_Vidushanka_CV.pdf" download class="btn-secondary">Download CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="about" class="about-section section-techno">
+
+
+  <!-- Section Title -->
+  <h3 class="section-title">About Me</h3>
+
+  <div class="container">
+    <!-- Left: Profile Image -->
+    <div class="about-profile-image">
+      <img src="assets/images/IMG_3185.jpg" alt="Profile" />
+    </div>
+
+    <!-- Right: Description -->
+    <div class="about-content">
+      <h3 class="typing-about" id="typingAbout"></h3>
+      <p class="about-text">
+        I am a highly motivated and enthusiastic Software Engineering student currently completing diploma at the Institute of Software Engineering (IJSE). I am passionate about learning new technologies, exploring innovative solutions, and improving existing systems. Welcome to my portfolio, where I showcase projects and skills that reflect my journey.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+ <section class="services-section section-techno" id="services">
+  
+  <h3>My Services</h3>
+
+  <div class="services-grid">
+    <!-- Service 1 -->
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-code"></i></div>
+      <h3>Web Development</h3>
+      <p>Building responsive and modern websites using React, TypeScript & Tailwind.</p>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+      <h3>UI/UX Design</h3>
+      <p>Designing clean and user-friendly interfaces for web applications.</p>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-server"></i></div>
+      <h3>Backend Development</h3>
+      <p>Creating robust APIs and server-side logic with Node.js & Express.</p>
+    </div>
+
+    <!-- Service 4 -->
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+      <h3>Front-End Development</h3>
+      <p>Specializing in building interactive UI with React, TailwindCSS, and modern JavaScript.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills-section section-techno" id="skills">
+  <!-- Decorative Circle -->
+  <div class="bg-circle bottom-right"></div>
+
+  <!-- Section Header -->
+  <h2 class="section-title">My Skills</h2>
+
+  <!-- Skills Wrapper -->
+  <div class="skills-wrapper">
+    <!-- Scroll Buttons -->
+    <button class="scroll-btn left" onclick="scrollSkills(-400)">&#10094;</button>
+    <button class="scroll-btn right" onclick="scrollSkills(400)">&#10095;</button>
+
+    <!-- Scrollable Skills Container -->
+    <div class="skills-scroll" id="skillsScroll">
+      <!-- Row 1 -->
+      <div class="skills-row">
+        <div class="skill-card"><p class="skill-name bg-orange">HTML</p><i class="skill-icon fab fa-html5"></i></div>
+        <div class="skill-card"><p class="skill-name bg-blue">CSS</p><i class="skill-icon fab fa-css3-alt"></i></div>
+        <div class="skill-card"><p class="skill-name bg-yellow">JavaScript</p><i class="skill-icon fab fa-js"></i></div>
+        <div class="skill-card"><p class="skill-name bg-blue-dark">TypeScript</p><i class="skill-icon fab fa-js"></i></div>
+        <div class="skill-card"><p class="skill-name bg-blue">React</p><i class="skill-icon fab fa-react"></i></div>
+        <div class="skill-card"><p class="skill-name bg-teal">React Native</p><i class="skill-icon fab fa-react"></i></div>
+        <div class="skill-card"><p class="skill-name bg-teal">Tailwind</p><i class="skill-icon fab fa-css3-alt"></i></div>
+        <div class="skill-card"><p class="skill-name bg-green">Node.js</p><i class="skill-icon fab fa-node-js"></i></div>
+        <div class="skill-card"><p class="skill-name bg-purple">Redux</p><i class="skill-icon fab fa-js"></i></div>
+        <div class="skill-card"><p class="skill-name bg-green">MongoDB</p><i class="skill-icon fas fa-database"></i></div>
+        <div class="skill-card"><p class="skill-name bg-orange">Illustrator</p><i class="skill-icon fab fa-adobe"></i></div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="skills-row">
+        <div class="skill-card"><p class="skill-name bg-gray">Express.js</p><i class="skill-icon fab fa-js"></i></div>
+        <div class="skill-card"><p class="skill-name bg-black">Next.js</p><i class="skill-icon fab fa-js"></i></div>
+        <div class="skill-card"><p class="skill-name bg-purple">Vite</p><i class="skill-icon fab fa-js"></i></div>
+        <div class="skill-card"><p class="skill-name bg-blue-dark">MySQL</p><i class="skill-icon fas fa-database"></i></div>
+        <div class="skill-card"><p class="skill-name bg-red">Java</p><i class="skill-icon fab fa-java"></i></div>
+        <div class="skill-card"><p class="skill-name bg-blue">JavaFX</p><i class="skill-icon fab fa-java"></i></div>
+        <div class="skill-card"><p class="skill-name bg-purple">Scene Builder</p><i class="skill-icon fab fa-java"></i></div>
+        <div class="skill-card"><p class="skill-name bg-yellow">Python</p><i class="skill-icon fab fa-python"></i></div>
+        <div class="skill-card"><p class="skill-name bg-yellow-dark">Databases</p><i class="skill-icon fas fa-database"></i></div>
+        <div class="skill-card"><p class="skill-name bg-pink">Figma</p><i class="skill-icon fab fa-figma"></i></div>
+        <div class="skill-card"><p class="skill-name bg-blue-dark">Photoshop</p><i class="skill-icon fab fa-adobe"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section section-techno">
+  
+
+  <div class="project-container">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-wrapper">
+      <!-- Scroll Buttons -->
+      <button class="scroll-btn left" onclick="scrollProjects(-300)">&#10094;</button>
+      <button class="scroll-btn right" onclick="scrollProjects(300)">&#10095;</button>
+
+      <!-- Scrollable Projects Row -->
+      <div class="projects-scroll" id="projectsScroll">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <img src="assets/images/Screenshot (93).png" alt="Image Background Remover" onclick="openModal(this.src)" />
+          <h3 class="project-title">Image Background Remover</h3>
+          <p class="project-desc">A web app built with JavaScript to remove image backgrounds efficiently.</p>
+          <a href="https://github.com/vinilvidushanka/Spring-boot---ClearStock.git" target="_blank">View Project →</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <img src="assets/images/Screenshot (92).png" alt="ClearStock" onclick="openModal(this.src)" />
+          <h3 class="project-title">ClearStock</h3>
+          <p class="project-desc">Full-stack e-commerce app with Spring Boot, payment integration, and inventory management.</p>
+          <a href="https://github.com/vinilvidushanka/Spring-boot---ClearStock.git" target="_blank">View Project →</a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <img src="assets/images/Screenshot (69).png" alt="Event Booking System" onclick="openModal(this.src)" />
+          <h3 class="project-title">Event Booking System</h3>
+          <p class="project-desc">MERN stack event booking portal with payments and tickets.</p>
+          <a href="https://github.com/vinilvidushanka/eventify-smart_online_event_booking_portal-front-end.git" target="_blank">View Project →</a>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <img src="assets/images/Screenshot 2024-02-18 083421.png" alt="Dog Care Clinic UI Design" onclick="openModal(this.src)" />
+          <h3 class="project-title">Dog Care Clinic UI Design</h3>
+          <p class="project-desc">Modern UI design for a Dog Care Clinic built in Figma.</p>
+          <a href="#" target="_blank">View Project →</a>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+          <img src="assets/images/Screenshot (57).png" alt="Agency Stock Management System" onclick="openModal(this.src)" />
+          <h3 class="project-title">Agency Stock Management System</h3>
+          <p class="project-desc">Full Complete Java FX Stand Alone project to Ice Cream Agency</p>
+          <a href="https://github.com/vinilvidushanka/Agency-final-project.git" target="_blank">View Project →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="projectModal" class="modal" onclick="closeModal()">
+    <img id="modalImage" src="" alt="Project Screenshot" />
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section section-techno">
+  
+
+  <div class="contact-container">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="typing-text-contact" id="typingTextContact"></p>
+
+    <form class="contact-form">
+      <!-- Name -->
+      <div class="input-group">
+        <input type="text" id="name" placeholder=" " required />
+        <label for="name">Your Name</label>
+      </div>
+
+      <!-- Email -->
+      <div class="input-group">
+        <input type="email" id="email" placeholder=" " required />
+        <label for="email">Your Email</label>
+      </div>
+
+      <!-- Message -->
+      <div class="input-group">
+        <textarea id="message" rows="4" placeholder=" " required></textarea>
+        <label for="message">Your Message</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+  <!-- Decorative Circle -->
+  <div class="footer-bg-circle"></div>
+
+  <div class="footer-container">
+    <!-- Left: Logo & Copyright -->
+    <div class="footer-left">
+      <h1 class="footer-logo">Vinil Vidushanka</h1>
+      <p class="footer-copy">&copy; 2025 Vinil Vidushanka. All rights reserved.</p>
+    </div>
+
+    <!-- Center: Navigation Links -->
+    <ul class="footer-nav">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Right: Social Links -->
+    <div class="footer-social">
+      <a href="https://github.com/vinilvidushanka" target="_blank" class="social-link" aria-label="GitHub">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0.297c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.76-1.605-2.665-.304-5.467-1.332-5.467-5.93 0-1.31.468-2.382 1.235-3.222-.123-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.288-1.552 3.294-1.23 3.294-1.23.653 1.653.241 2.874.118 3.176.77.84 1.233 1.912 1.233 3.222 0 4.61-2.807 5.625-5.479 5.921.429.37.813 1.096.813 2.21 0 1.596-.014 2.883-.014 3.273 0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+      </a>
+      <a href="https://linkedin.com/in/vinil-vidushanka-b64555319" target="_blank" class="social-link" aria-label="LinkedIn">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.788-1.75-1.757s.784-1.757 1.75-1.757 1.75.788 1.75 1.757-.784 1.757-1.75 1.757zm13.5 11.268h-3v-5.604c0-1.337-.026-3.063-1.867-3.063-1.868 0-2.154 1.46-2.154 2.969v5.698h-3v-10h2.881v1.367h.041c.401-.762 1.379-1.566 2.841-1.566 3.036 0 3.6 1.998 3.6 4.594v5.605z"/>
+        </svg>
+      </a>
+      <a href="https://www.facebook.com/vinil.vidushanka" target="_blank" class="social-link" aria-label="Facebook">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24h-1.918c-1.504 0-1.794.715-1.794 1.763v2.309h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.324-.593 1.324-1.324v-21.35c0-.732-.594-1.325-1.325-1.325z"/>
+        </svg>
+      </a>
+      <a href="https://instagram.com/yourusername" target="_blank" class="social-link" aria-label="Instagram">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.343 3.608 1.319.975.975 1.256 2.242 1.318 3.608.058 1.266.069 1.646.069 4.843s-.012 3.577-.07 4.843c-.062 1.366-.343 2.633-1.318 3.608-.975.975-2.242 1.256-3.608 1.318-1.266.058-1.646.069-4.843.069s-3.577-.012-4.843-.07c-1.366-.062-2.633-.343-3.608-1.318-.975-.975-1.256-2.242-1.318-3.608-.058-1.266-.069-1.646-.069-4.843s.012-3.577.07-4.843c.062-1.366.343-2.633 1.318-3.608.975-.975 2.242-1.256 3.608-1.318 1.266-.058 1.646-.069 4.843-.069zm0-2.163c-3.259 0-3.667.012-4.947.07-1.582.073-2.996.36-4.096 1.46-1.1 1.1-1.386 2.514-1.46 4.096-.058 1.28-.07 1.688-.07 4.947s.012 3.667.07 4.947c.073 1.582.36 2.996 1.46 4.096 1.1 1.1 2.514 1.386 4.096 1.46 1.28.058 1.688.07 4.947.07s3.667-.012 4.947-.07c1.582-.073 2.996-.36 4.096-1.46 1.1-1.1 1.386-2.514 1.46-4.096.058-1.28.07-1.688.07-4.947s-.012-3.667-.07-4.947c-.073-1.582-.36-2.996-1.46-4.096-1.1-1.1-2.514-1.386-4.096-1.46-1.28-.058-1.688-.07-4.947-.07zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.208 0-4-1.792-4-4s1.792-4 4-4 4 1.792 4 4-1.792 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      if(menu.style.display === 'flex') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'flex';
+      }
+    }
+
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if(section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      // Close mobile menu after click
+      const menu = document.getElementById('mobileMenu');
+      menu.style.display = 'none';
+    }
+  </script>
+  <script>
+  // Home Section Typing Effect
+  const texts = ["Fullstack Developer", "Graphic Designer", "Web Developer"];
+  const typingSpeed = 100;
+  const deletingSpeed = 50;
+  const pause = 1500;
+
+  let charIndex = 0;
+  let textIndex = 0;
+  let isDeleting = false;
+  const typingElement = document.getElementById("typingText");
+
+  function typeHome() {
+    const currentText = texts[textIndex];
+    if(!isDeleting){
+      typingElement.textContent = currentText.slice(0, charIndex+1);
+      charIndex++;
+      if(charIndex === currentText.length){
+        setTimeout(()=> isDeleting = true, pause);
+      }
+    } else {
+      typingElement.textContent = currentText.slice(0, charIndex-1);
+      charIndex--;
+      if(charIndex === 0){
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+      }
+    }
+    setTimeout(typeHome, isDeleting ? deletingSpeed : typingSpeed);
+  }
+  typeHome(); // start home section typing
+</script>
+
+<script>
+(function() { // IIFE to avoid redeclaring variables globally
+  const aboutText = "I'm Vinil Vidushanka";
+  const typingElement = document.getElementById("typingAbout");
+  let index = 0;
+
+  function typeAbout() {
+    if(!typingElement) return; // safety check
+    typingElement.textContent = aboutText.slice(0, index + 1);
+    index++;
+    if (index <= aboutText.length) {
+      setTimeout(typeAbout, 100);
+    } else {
+      setTimeout(() => {
+        index = 0;
+        typingElement.textContent = "";
+        typeAbout();
+      }, 1500);
+    }
+  }
+
+  typeAbout();
+})();
+</script>
+
+
+<script>
+function scrollSkills(offset) {
+  const container = document.getElementById('skillsScroll');
+  if(container) container.scrollBy({ left: offset, behavior: 'smooth' });
+}
+</script>
+
+<script>
+  const scrollProjects = (offset) => {
+    const container = document.getElementById('projectsScroll');
+    if(container) container.scrollBy({ left: offset, behavior: 'smooth' });
+  }
+
+  function openModal(src) {
+    document.getElementById('modalImage').src = src;
+    document.getElementById('projectModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('projectModal').style.display = 'none';
+  }
+</script>
+
+<script>
+  // Typing effect
+  const text = "Have any project idea? Let's connect!";
+  const typingText = document.getElementById("typingTextContact");
+  let index = 0;
+
+  function type() {
+    typingText.textContent = text.slice(0, index + 1);
+    index++;
+    if(index <= text.length) {
+      setTimeout(type, 80);
+    } else {
+      setTimeout(() => {
+        index = 0;
+        typingText.textContent = "";
+        type();
+      }, 1000);
+    }
+  }
+  type();
+</script>
+
+<script> const canvas = document.getElementById('techno-bg'); const ctx = canvas.getContext('2d'); let particlesArray; function init() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; particlesArray = []; const numberOfParticles = 100; for (let i = 0; i < numberOfParticles; i++) { particlesArray.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, size: Math.random() * 3 + 1, speedX: Math.random() * 1 - 0.5, speedY: Math.random() * 1 - 0.5, }); } } function animate() { ctx.fillStyle = 'rgba(15, 15, 15, 0.3)';  ctx.fillRect(0, 0, canvas.width, canvas.height); particlesArray.forEach(p => { ctx.fillStyle = '#0ff'; ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2); ctx.fill(); p.x += p.speedX; p.y += p.speedY; if (p.x > canvas.width) p.x = 0; if (p.x < 0) p.x = canvas.width; if (p.y > canvas.height) p.y = 0; if (p.y < 0) p.y = canvas.height; }); requestAnimationFrame(animate); } window.addEventListener('resize', init); init(); animate(); </script>
+
+
+
+<!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+</body>
+</html>
