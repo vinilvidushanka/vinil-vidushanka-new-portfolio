@@ -99,7 +99,7 @@
       <!-- Buttons -->
       <div class="home-buttons">
         <a href="#projects" class="btn-primary">View My Work</a>
-        <a href="Vinil_Vidushanka_CV.pdf" download class="btn-secondary">Download CV</a>
+        <a href="assets/images/file/Vinil_Vidushanka_CV.pdf" download class="btn-secondary" onclick="downloadCV()">Download CV</a>
       </div>
     </div>
   </div>
@@ -484,6 +484,17 @@ function scrollSkills(offset) {
     }
   }
   type();
+</script>
+
+<script>
+function downloadCV() {
+  const link = document.createElement("a");
+  link.href = "assets/images/file/Vinil_Vidushanka_CV.pdf";
+  link.download = "Vinil_Vidushanka_CV.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 </script>
 
 <script> const canvas = document.getElementById('techno-bg'); const ctx = canvas.getContext('2d'); let particlesArray; function init() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; particlesArray = []; const numberOfParticles = 100; for (let i = 0; i < numberOfParticles; i++) { particlesArray.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, size: Math.random() * 3 + 1, speedX: Math.random() * 1 - 0.5, speedY: Math.random() * 1 - 0.5, }); } } function animate() { ctx.fillStyle = 'rgba(15, 15, 15, 0.3)';  ctx.fillRect(0, 0, canvas.width, canvas.height); particlesArray.forEach(p => { ctx.fillStyle = '#0ff'; ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2); ctx.fill(); p.x += p.speedX; p.y += p.speedY; if (p.x > canvas.width) p.x = 0; if (p.x < 0) p.x = canvas.width; if (p.y > canvas.height) p.y = 0; if (p.y < 0) p.y = canvas.height; }); requestAnimationFrame(animate); } window.addEventListener('resize', init); init(); animate(); </script>
