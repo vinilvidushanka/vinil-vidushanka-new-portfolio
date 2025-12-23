@@ -1,7 +1,7 @@
 # Vinil Vidushanka Portfolio 🚀
 
 This is the personal portfolio of **Vinil Vidushanka**, showcasing skills, projects, and contact options.  
-Built with **HTML**, **CSS**, and **JavaScript**.
+Built with **HTML**, **CSS**, and **JavaScript** 🛠️ .
 
 ---
 
